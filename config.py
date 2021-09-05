@@ -39,17 +39,17 @@ print(
 print('Scale character value = ', scale_character, '| Scale affinity value = ', scale_affinity)
 print('Training Dataset = ', dataset_name, '| Testing Dataset = ', test_dataset_name)
 
-DataLoaderSYNTH_base_path = '/home/SharedData/Mayank/SynthText/Images'
-DataLoaderSYNTH_mat = '/home/SharedData/Mayank/SynthText/gt.mat'
-DataLoaderSYNTH_Train_Synthesis = '/home/SharedData/Mayank/Models/SYNTH/train_synthesis/'
+DataLoaderSYNTH_base_path = '/content/CRAFT_Train/SynthText/Images'
+DataLoaderSYNTH_mat = '/content/CRAFT_Train/SynthText/gt.mat'
+DataLoaderSYNTH_Train_Synthesis = '/content/CRAFT_Train/Models/SYNTH/train_synthesis/'
 
-DataLoader_Other_Synthesis = '/home/SharedData/Mayank/'+dataset_name+'/Save/'
-Other_Dataset_Path = '/home/SharedData/Mayank/'+dataset_name
-save_path = '/home/SharedData/Mayank/Models/WeakSupervision/'+dataset_name
-images_path = '/home/SharedData/Mayank/'+dataset_name+'/Images'
-target_path = '/home/SharedData/Mayank/'+dataset_name+'/Generated'
+DataLoader_Other_Synthesis = '/content/CRAFT_Train/Save/'
+Other_Dataset_Path = '/content/CRAFT_Train/'
+save_path = '/content/CRAFT_Train/Models/WeakSupervision/'
+images_path = '/content/CRAFT_Train/Images'
+target_path = '/content/CRAFT_Train/Generated'
 
-Test_Dataset_Path = '/home/SharedData/Mayank/'+test_dataset_name
+Test_Dataset_Path = '/content/CRAFT_Train/'
 
 threshold_word = 0.7
 threshold_fscore = 0.5
@@ -67,12 +67,12 @@ dataset_pre_process = {
 	},
 	'ic15': {
 		'train': {
-			'target_json_path': "/content/CRAFT-Remade/icdar2015/train/gt",
-			'target_folder_path': "/content/CRAFT-Remade/icdar2015/train/img",
+			'target_json_path': "/content/CRAFT_Train/icdar2015/train/gt",
+			'target_folder_path': "/content/CRAFT_Train/icdar2015/train/img",
 		},
 		'test': {
-			'target_json_path': "/content/CRAFT-Remade/icdar2015/val/gt",
-			'target_folder_path': "/content/CRAFT-Remade/icdar2015/val/img",
+			'target_json_path': "/content/CRAFT_Train/icdar2015/val/gt",
+			'target_folder_path': "/content/CRAFT_Train/icdar2015/val/img",
 		}
 	}
 }
